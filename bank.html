@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banking</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        th,td{
+            padding: 10px 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -46,6 +52,22 @@
                     <button id="with-btn" class="rounded-lg bg-pink-100 px-5 py-2 font-medium text-lg">Withdraw</button>
                 </div>
             </div>
+        </section>
+
+        <section class="my-8">
+            <h2 class="text-4xl font-medium py-4 text-center">Transaction Details</h2>
+            <table class="border-collapse border border-green-800 w-75 mx-auto">
+                <thead>
+                  <tr>
+                    <th class="border border-green-600 ">Transaction Type</th>
+                    <th class="border border-green-600 ">Amount</th>
+                    <th class="border border-green-600 ">Time</th>
+                  </tr>
+                </thead>
+                <tbody id="table-body">
+                  
+                </tbody>
+              </table>
         </section>
     </main>
 
