@@ -4,6 +4,11 @@ document.getElementById('depo-btn').addEventListener('click',function(){
         alert('Invalid transaction');
         return;
     }
+    if (parseFloat(depoField.value).toString() == 'NaN') {
+        alert('Invalid transaction');
+        depoField.value = '';
+        return;
+    }
     const amout = parseFloat(depoField.value);
     if (amout < 0) {
         alert('Invalid transaction');
@@ -29,7 +34,13 @@ document.getElementById('with-btn').addEventListener('click',function(){
         alert('Invalid transaction');
         return;
     }
+    if (parseFloat(withField.value).toString() == 'NaN') {
+        alert('Invalid transaction');
+        withField.value = '';
+        return;
+    }
     const amout = parseFloat(withField.value);
+    
     if (amout < 0) {
         alert('Invalid transaction');
         withField.value = '';
